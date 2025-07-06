@@ -81,6 +81,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            text-decoration: none;
         }
 
         .video-card {
@@ -88,6 +89,8 @@
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+
         }
 
         .video-card img {
@@ -135,6 +138,23 @@
             flex-shrink: 0;
         }
 
+          /* Shorts */
+    .shorts-section {
+      margin-top: 40px;
+    }
+    .shorts-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .short {
+      width: 120px;
+      height: 200px;
+      background: lightgray;
+      border-radius: 8px;
+    }
+    
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -167,7 +187,10 @@
         </div>
 
         <div class="main">
-            <div class="video-grid" id="video-grid">
+            <div >
+                <a href="SinglePage.html" class="video-grid" id="video-grid">
+
+                </a>
                 <!-- Video cards go here -->
             </div>
 
@@ -185,9 +208,9 @@
 
     <script>
         const dummyVideos = [
-            { title: "How to Plan an MVP", channel: "Y Combinator", views: "727K views · 5 years ago" },
-            { title: "Indomie Empire in Nigeria", channel: "Delvett", views: "7.2K views · 8 days ago" },
-            { title: "Play & Build with Ohara", channel: "Sponsored", views: "Ad" },
+            { title: "How to Plan an MVP", channel: "Y Combinator", views: "727K views · 5 years ago",thumbnail:"https://i.ytimg.com/vi/1hHMwLxN6EM/hq720.jpg" },
+            { title: "Indomie Empire in Nigeria", channel: "Delvett", views: "7.2K views · 8 days ago" ,thumbnail:":https://i.ytimg.com/vi/ElHACvKSxgc/hq720.jpg"},
+            { title: "Play & Build with Ohara", channel: "Sponsored", views: "Ad" ,thumbnail:"https://i9.ytimg.com/vi/Dv0bHmSAbN4/hq720_custom_2…AFwAcABBg==&rs=AOn4CLCB22uMeZQl5wXRTm28-426m_KkCA"},
             { title: "Startup Psychology Tips", channel: "TechMind", views: "58K views · 2 months ago" },
             { title: "Beginner JavaScript Guide", channel: "CodeLab", views: "21K views · 3 weeks ago" },
         ];
@@ -198,7 +221,8 @@
             const card = document.createElement("div");
             card.className = "video-card";
             card.innerHTML = `
-        <img src="youtube-home.png" alt="Video thumbnail" />
+            
+        <img src=${video.thumbnail} alt="Video thumbnail" />
         <div class="video-info">
           <h4>${video.title}</h4>
           <p>${video.channel}</p>

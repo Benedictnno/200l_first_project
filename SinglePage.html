@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube - Video Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .header {
+      background: white;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header h1 {
+      color: red;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .video-frame {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .video-info {
+      margin-top: 15px;
+    }
+
+    .video-info h2 {
+      margin-bottom: 6px;
+    }
+
+    .video-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn {
+      background: #e5e5e5;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .channel-info {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .channel-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      background-color: #1976d2;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .subscribe-btn {
+      background: red;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .comments-section {
+      margin-top: 40px;
+    }
+
+    .comment {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .comment h4 {
+      margin: 0 0 5px;
+    }
+
+    .comment p {
+      margin: 0;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .video-stats, .channel-info {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>YouTube</h1>
+    <div class="profile">SJ</div>
+  </div>
+
+  <div class="container">
+    <div class="video-frame">
+      <img src="youtube-home.png" alt="Video thumbnail" />
+    </div>
+
+    <div class="video-info">
+      <h2>How to Plan an MVP</h2>
+      <div class="video-stats">
+        <p>727K views • 5 years ago</p>
+        <div class="actions">
+          <div class="btn">👍 18K</div>
+          <div class="btn">👎</div>
+          <div class="btn">🔗 Share</div>
+          <div class="btn">💾 Save</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="channel-info">
+      <div class="channel-left">
+        <div class="avatar">YC</div>
+        <div>
+          <strong>Y Combinator</strong>
+          <p style="margin: 0; color: gray;">1.2M subscribers</p>
+        </div>
+      </div>
+      <div class="subscribe-btn">Subscribe</div>
+    </div>
+
+    <div class="comments-section">
+      <h3>Comments</h3>
+      <div class="comment">
+        <h4>CodeDev</h4>
+        <p>This was incredibly helpful for building my startup MVP. Thanks YC!</p>
+      </div>
+      <div class="comment">
+        <h4>NaijaTech</h4>
+        <p>Indomie part blew my mind. The Tolaram story is fire 🔥</p>
+      </div>
+      <div class="comment">
+        <h4>SoftBuilds</h4>
+        <p>Michael Seibel always drops gold. Watched this 3 times already.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
